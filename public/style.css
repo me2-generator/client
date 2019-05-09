@@ -17,4 +17,18 @@
   width: 100%;
 }
 
+.card-image {
+  min-height: 10.8em;
+}
+
+.card .card-image img {
+  object-fit: cover;
+  min-height: 163px;
+}
+
+.header__icon {
+  width: 3%;
+  margin: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */

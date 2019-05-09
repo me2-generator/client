@@ -1,4 +1,5 @@
 Vue.component('card', {
+    props: ['title', 'image'],
     data: function () {
       return {
         count: 0
@@ -8,11 +9,11 @@ Vue.component('card', {
     `
     <div class="card">
         <div class="card-image">
-          <img src="https://i.imgur.com/HQKKXxe.jpg" style="width: 100%;">
+          <img :src="image" style="width: 100%;">
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content">
-          <p>Tom Scream</p>
+          <p>{{title}}</p>
         </div>
     </div>
     `

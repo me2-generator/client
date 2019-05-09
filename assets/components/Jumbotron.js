@@ -1,4 +1,5 @@
 Vue.component('jumbotron', {
+    props: ['title', 'image'],
     data: function () {
       return {
         count: 0
@@ -9,11 +10,11 @@ Vue.component('jumbotron', {
     <div class="jumbotron">
       <div class="row">
         <div class="col s7">
-          <div class="title">
-            Title
-          </div>
+          <h5 class="title">
+            {{title}}
+          </h5>
           <div class="image">
-            <img src="https://altaonline.com/wp-content/uploads/2018/11/ATA010819jobs_img01.jpg" alt="Meme Img">
+            <img :src="image" alt="Meme Img">
           </div>
         </div>
         <div class="col s5">
