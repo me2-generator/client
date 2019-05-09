@@ -2,4 +2,19 @@
   background-color: #333;
 }
 
+.jumbotron {
+  background-color: #fff;
+  border: solid 1px #bdbdbd;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 2em;
+}
+
+.jumbotron .image>img{
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
