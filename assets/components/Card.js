@@ -6,17 +6,14 @@ Vue.component('card', {
     },
     template: 
     `
-    <div>
-      <nav class="header">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">My2 Generator</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
+    <div class="card">
+        <div class="card-image">
+          <img src="https://i.imgur.com/HQKKXxe.jpg" style="width: 100%;">
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
-      </nav>
+        <div class="card-content">
+          <p>Tom Scream</p>
+        </div>
     </div>
     `
   })
