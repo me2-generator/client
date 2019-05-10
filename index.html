@@ -20,10 +20,20 @@
 
             <div class="row">
                 <jumbotron
-                    v-bind:title="meme.title"
-                    v-bind:image="meme.image"
+                    :title="meme.title"
+                    :image="meme.image"
+                    :memeForm="memeForm"
                 >
-                    <myform></myform>
+                    <canvas 
+                        id="myCanvas"
+                        slot="canvas"
+                        style="background-color: red"
+                        width="470"
+                        height="280"
+                    >my canvas!</canvas>
+                    <myform
+                        slot="form"
+                    ></myform>
                 </jumbotron>
             </div>
             <div class="row">

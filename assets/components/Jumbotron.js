@@ -1,8 +1,7 @@
 Vue.component('jumbotron', {
-    props: ['title', 'image'],
+    props: ['title', 'image', 'memeForm'],
     data: function () {
       return {
-        count: 0
       }
     },
     template: 
@@ -13,12 +12,16 @@ Vue.component('jumbotron', {
           <h5 class="title">
             {{title}}
           </h5>
-          <div class="image">
-            <img :src="image" alt="Meme Img">
+          <div class="download-content">
+            <div></div>
+            <slot name="canvas"></slot>
+            <div></div>
           </div>
         </div>
         <div class="col s5">
-          <slot></slot>
+          <slot
+          :memeForm="memeForm"
+          name="form"></slot>
         </div>
       </div>
     </div>

@@ -20,7 +20,11 @@ var app = new Vue({
           title: 'Thanos',
           image: 'https://stayhipp.com/wp-content/uploads/2018/12/Thanos-.jpg'
         }
-      ]
+      ],
+      memeForm: {
+        topText: 'text',
+        bottomText: 'bottm'
+      }
     },
     methods: {
         
