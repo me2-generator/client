@@ -21,26 +21,55 @@
             <div class="row">
                 <jumbotron
                     :title="meme.title"
-                    :image="meme.image"
-                    :memeForm="memeForm"
+                    :url="meme.url"
+                    :meme-form="memeForm"
                 >
-                    <canvas 
+                    <!-- <canvas 
                         id="myCanvas"
                         slot="canvas"
                         style="background-color: red"
                         width="470"
                         height="280"
-                    >my canvas!</canvas>
-                    <myform
-                        slot="form"
-                    ></myform>
+                    ></canvas> -->
                 </jumbotron>
             </div>
+
+            <div class="row">
+                <form v-on:submit.prevent="createMeme">
+                    <h6>Place your text below</h6>
+                    <div class="input-field">
+                        <input 
+                            type="text" 
+                            id="autocomplete-input" 
+                            v-model="memeForm.topText"
+                        >
+                        <label for="autocomplete-input">Top Text</label>
+                    </div>
+                    <div class="input-field">
+                        <input 
+                            type="text" 
+                            id="autocomplete-input"
+                            v-model="memeForm.bottomText"
+                        >
+                        <label for="autocomplete-input">Bottom Text</label>
+                    </div>
+                
+                    <button class="btn waves-effect waves-light blue-grey" type="submit" name="action">Download
+                        <i class="material-icons right">send</i>
+                    </button>
+                    
+                </form>
+                <!-- <myform 
+                    v-on:createMeme="createMeme"
+                ></myform> -->
+            </div>
+
             <div class="row">
                 <div class="col s3" v-for="meme in memes">
-                    <card 
+                    <card
                         v-bind:title="meme.title"
-                        v-bind:image="meme.image"
+                        v-bind:url="meme.url"
+                        v-on:generate-canvas="generateCanvas"
                     ></card>
                 </div>
             </div>
@@ -53,7 +82,8 @@
     <script src="./assets/components/Jumbotron.js"></script>
     <script src="./assets/components/Form.js"></script>
     <script src="./assets/components/Card.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <script src="./assets/js/vue.js"></script>
 </body>
 </html>

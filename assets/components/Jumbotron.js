@@ -1,5 +1,5 @@
 Vue.component('jumbotron', {
-    props: ['title', 'image', 'memeForm'],
+    props: ['title', 'url', 'meme-form'],
     data: function () {
       return {
       }
@@ -13,9 +13,8 @@ Vue.component('jumbotron', {
             {{title}}
           </h5>
           <div class="download-content">
-            <div></div>
             <slot name="canvas"></slot>
-            <div></div>
+            <img :src="url">
           </div>
         </div>
         <div class="col s5">

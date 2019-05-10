@@ -1,15 +1,29 @@
 Vue.component('card', {
-    props: ['title', 'image'],
+    props: ['title', 'url'],
     data: function () {
       return {
-        count: 0
+        meme : {
+          title: '',
+          url: ''
+        }
+      }
+    },
+    methods: {
+      toCanvas() {
+        this.meme.title = this.title
+        this.meme.url = this.url
+        
+        this.$emit('generate-canvas', this.meme);
       }
     },
     template: 
     `
-    <div class="card">
+    <div 
+      class="card"
+      @click="toCanvas"
+    >
         <div class="card-image">
-          <img :src="image" style="width: 100%;">
+          <img :src="url" style="width: 100%;">
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content">

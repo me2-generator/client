@@ -22,8 +22,9 @@
 }
 
 .card .card-image img {
-  object-fit: cover;
   min-height: 163px;
+  max-height: 220px;
+  object-fit: contain;
 }
 
 .header__icon {
@@ -33,6 +34,21 @@
 
 .download-content {
   position: relative;
+}
+
+.meme__text-top {
+  position: absolute;
+  color: #fff;
+  font-size: 3.2em;
+  margin-left: 25px;
+}
+
+.meme__text-bottom {
+  position: absolute;
+  color: #fff;
+  font-size: 3.2em;
+  margin-left: 25px;
+  bottom: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */
