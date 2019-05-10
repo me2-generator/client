@@ -1,0 +1,54 @@
+.header {
+  background-color: #333;
+}
+
+.jumbotron {
+  background-color: #fff;
+  border: solid 1px #bdbdbd;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 2em;
+}
+
+.jumbotron .image>img{
+  width: 100%;
+}
+
+.card-image {
+  min-height: 10.8em;
+}
+
+.card .card-image img {
+  min-height: 163px;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.header__icon {
+  width: 3%;
+  margin: 14px;
+}
+
+.download-content {
+  position: relative;
+}
+
+.meme__text-top {
+  position: absolute;
+  color: #fff;
+  font-size: 3.2em;
+  margin-left: 25px;
+}
+
+.meme__text-bottom {
+  position: absolute;
+  color: #fff;
+  font-size: 3.2em;
+  margin-left: 25px;
+  bottom: 1%;
+}
+
+/*# sourceMappingURL=style.css.map */
