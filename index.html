@@ -23,6 +23,8 @@
                     :title="meme.title"
                     :url="meme.url"
                     :meme-form="memeForm"
+                    :atas="memeForm.topText"
+                    :bawah="memeForm.bottomText"
                 >
                     <!-- <canvas 
                         id="myCanvas"
@@ -33,7 +35,9 @@
                     ></canvas> -->
                 </jumbotron>
             </div>
-
+            <div>
+                <img :src="imgResult" alt="" srcset="">
+            </div>
             <div class="row">
                 <form v-on:submit.prevent="createMeme">
                     <h6>Place your text below</h6>
@@ -49,12 +53,18 @@
                         <input 
                             type="text" 
                             id="autocomplete-input"
-                            v-model="memeForm.bottomText"
+                            v-model="memeForm.bottomText" 
                         >
                         <label for="autocomplete-input">Bottom Text</label>
                     </div>
                 
-                    <button class="btn waves-effect waves-light blue-grey" type="submit" name="action">Download
+                    <button class="btn waves-effect waves-light blue-grey" type="submit" name="action"
+                        @click="screenshot"
+                    >Download
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <input type="file" id="file" ref="file" class="form-control-file" v-on:change="handleFileUpload">
+                    <button class="btn waves-effect waves-light blue-grey" @click.prevent="upload">upload
                         <i class="material-icons right">send</i>
                     </button>
                     
@@ -76,6 +86,7 @@
         </div>
     </div>
 
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>        
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./assets/components/Header.js"></script>
